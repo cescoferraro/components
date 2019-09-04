@@ -1,6 +1,6 @@
 {
-  "name": "components",
-  "version": "0.0.1",
+  "name": "cescoferraro-components",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -10,6 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook",
     "build": "rollup -c"
   },
   "repository": {
@@ -23,12 +24,26 @@
   },
   "homepage": "https://github.com/cescoferraro/components#readme",
   "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-backgrounds": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-storysource": "^5.1.11",
+    "@storybook/addon-viewport": "^5.1.11",
+    "@storybook/react": "5.1.11",
     "@types/react": "16.9.2",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "8.0.6",
     "rollup": "1.20.3",
     "rollup-plugin-typescript2": "0.24.0",
     "typescript": "3.6.2"
   },
   "dependencies": {
-    "react": "16.9.0"
+    "@material-ui/core": "4.4.0",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   }
 }
