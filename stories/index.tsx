@@ -1,2 +1,3 @@
-export * from "./B2BButton"
-export * from "./MainHeader"
+// export * from "./index.stories"
+// export * from "./main.stories"
+export * from "./simple.stories"
