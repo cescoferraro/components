@@ -9,11 +9,10 @@ import "./global.css"
 function loadStories() {
   req.keys().forEach(req);
 }
-
+//
 addDecorator(withA11y)
 addDecorator(withKnobs)
 
-// addParameters({ viewport: { defaultViewport: 'iphone6' }});
 addParameters({
   backgrounds: [
     {name: 'white', value: 'white', default: true},
@@ -21,7 +20,7 @@ addParameters({
     {name: 'facebook', value: '#3b5998'},
   ],
 })
-
+//
 addDecorator(withInfo({
   header: false,
   inline: true,

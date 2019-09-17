@@ -3,6 +3,6 @@ import {storiesOf} from '@storybook/react';
 import {Simple} from '../src';
 
 storiesOf('B2BButton', module)
-  .add('primary', () =>
+  .add('simple', () =>
     <Simple/>
   );

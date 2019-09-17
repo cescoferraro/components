@@ -48,12 +48,12 @@ export const B2BButton = (
   {type, disabled, style, submit, label, onClick}:
     any
 ) => {
-  const classes: any = ya(type)();
+  // const classes: any = ya(type)();
   return (
     <Button
       classes={{
-        root: classes.root,
-        containedSecondary: classes.containedSecondary,
+        // root: classes.root,
+        // containedSecondary: classes.containedSecondary,
       }}
       href={""}
       disabled={disabled}
