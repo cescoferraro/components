@@ -3,9 +3,6 @@ import pkg from './package.json'
 
 let external = [...Object.keys(pkg.dependencies || {})];
 
-console.log(pkg)
-console.log(external)
-
 export default {
     input: 'src/index.tsx',
     output: [

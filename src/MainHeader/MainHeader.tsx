@@ -22,7 +22,7 @@ export const B2BMainText = (
   let innerColor = textColor;
   // let innerColor = color("cor", textColor);
   return (
-    <React.Fragment>
+    <div style={{width: "100%"}}>
       <div style={{height: isMobile ? 16 : 40}}/>
       <Typography
         style={{fontSize: 30, textAlign: "center", color: innerColor}}
@@ -39,7 +39,7 @@ export const B2BMainText = (
       </Typography>
       }
       <div style={{height: isMobile ? 16 : 40}}/>
-    </React.Fragment>
+    </div>
   );
 };
 
