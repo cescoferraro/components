@@ -32,6 +32,8 @@ const ya = (type: string) => makeStyles(() => {
   let stextColor = background;
   return createStyles({
     root: {
+      minHeight: 50,
+      minWidth: 300,
       background: type === regular ? background : sbackground,
       color: type === regular ? textColor : stextColor,
       "&:hover": {

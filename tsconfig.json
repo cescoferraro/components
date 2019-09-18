@@ -3,6 +3,8 @@
     "outDir": "build/lib",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "strictNullChecks": true,
     "jsx": "react"
   },
