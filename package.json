@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook": "storybook-to-ghpages --out public",
     "storybook": "start-storybook",
     "build": "rollup -c"
   },
