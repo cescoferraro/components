@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Button, createStyles, makeStyles} from "@material-ui/core";
+import {Button} from "@material-ui/core";
+import {createStyles, makeStyles} from "@material-ui/styles";
 import PropTypes from "prop-types";
 
 let regular = "primary";
@@ -22,7 +23,7 @@ let propTypes = {
   onClick: PropTypes.func
 };
 
-const ya = (type: any) => makeStyles(() => {
+const ya = (type: string) => makeStyles(() => {
   let background = "#0098A6";
   let sbackground = "white";
   let hoverbackground = "#006a74";
@@ -48,12 +49,12 @@ export const B2BButton = (
   {type, disabled, style, submit, label, onClick}:
     any
 ) => {
-  // const classes: any = ya(type)();
+  const classes: any = ya(type)();
   return (
     <Button
       classes={{
-        // root: classes.root,
-        // containedSecondary: classes.containedSecondary,
+        root: classes.root,
+        containedSecondary: classes.containedSecondary,
       }}
       href={""}
       disabled={disabled}

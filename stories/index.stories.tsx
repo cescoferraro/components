@@ -15,13 +15,15 @@ const typeGEN = (type: string) =>
 
 storiesOf('B2BButton', module)
   .add('primary', () =>
-    <B2BButton
-      type={typeGEN("primary")}
-      label={"CLICK ME"}
-    />
+    <StoryPresenter>
+      <B2BButton
+        type={typeGEN("primary")}
+        label={"CLICK ME"}
+      />
+    </StoryPresenter>
   )
   .add('secondary', () =>
-    <div style={{...flexer, minHeight:200}}>
+    <StoryPresenter>
       <B2BButton
         type={typeGEN("secondary")}
         label={"CLICK ME"}
@@ -29,5 +31,18 @@ storiesOf('B2BButton', module)
           console.log(2378324)
         }}
       />
+    </StoryPresenter>
+  );
+
+
+export const StoryPresenter = ({children}: { children: any }) => {
+  return (
+    <div style={{
+      ...flexer,
+      background: "url('http://www.sclance.com/pngs/grid-png-transparent/grid_png_transparent_613046.png')",
+      backgroundSize: "cover",
+      minHeight: 200}}>
+      {children}
     </div>
   );
+};

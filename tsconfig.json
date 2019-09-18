@@ -3,6 +3,7 @@
     "outDir": "build/lib",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "strictNullChecks": true,
     "jsx": "react"
   },
   "include": ["src/**/*"],
