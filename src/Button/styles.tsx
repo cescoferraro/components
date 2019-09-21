@@ -1,13 +1,13 @@
 import {createStyles, makeStyles} from "@material-ui/styles";
 
-let regular = "primary";
-export const makeStylesGen = (type: string) => makeStyles(() => {
+export const makeStylesGen = (type: any) => makeStyles(() => {
   let background = "#0098A6";
   let sbackground = "white";
   let hoverbackground = "#006a74";
   let shoverbackground = "#b2b2b2";
   let textColor = "white";
   let stextColor = background;
+  let regular = "primary";
   return createStyles({
     root: {
       minHeight: 50,

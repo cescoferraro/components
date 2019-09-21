@@ -1,14 +1,11 @@
 import * as React from 'react';
 import {Button} from "@material-ui/core";
-import PropTypes from "prop-types";
+import {InferProps} from "prop-types";
 import {makeStylesGen} from "./styles";
 import {defaultProps, propTypes} from "./props";
 
-export const B2BButton = (
-  {type, disabled, style, submit, label,onClick}:
-    PropTypes.InferProps<typeof propTypes>
-) => {
-  const classes: any = makeStylesGen(type)();
+export const B2BButton = (props: InferProps<typeof B2BButton.propTypes>) => {
+  const classes: any = makeStylesGen(props.type)();
   return (
     <Button
       classes={{
@@ -16,14 +13,14 @@ export const B2BButton = (
         containedSecondary: classes.containedSecondary,
       }}
       href={""}
-      disabled={disabled}
-      type={submit ? "submit" : "button"}
-      style={{minWidth: 300, margin: 0, ...style}}
-      color={type}
+      disabled={props.disabled}
+      type={props.submit ? "submit" : "button"}
+      style={{minWidth: 300, margin: 0, ...props.style}}
+      color={props.type}
       variant={"contained"}
-      onClick={onClick}
+      onClick={props.onClick}
     >
-      {label}
+      {props.label}
     </Button>
   );
 };

@@ -2,13 +2,8 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {B2BButton} from '../src';
 import {select} from "@storybook/addon-knobs"
-
-export const flexer: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignSelf: "center",
-  alignItems: "center"
-};
+import {flexer} from "../src/flexer";
+import {UserCardListItem} from "../src/card/usercard";
 
 const typeGEN = (type: string) =>
   select("Type", {primary: "primary", secondary: "secondary"}, type);
@@ -39,9 +34,10 @@ export const StoryPresenter = ({children}: { children: any }) => {
   return (
     <div style={{
       ...flexer,
-      background: "url('http://www.sclance.com/pngs/grid-png-transparent/grid_png_transparent_613046.png')",
-      backgroundSize: "cover",
-      minHeight: 200}}>
+      // background: "url('http://www.sclance.com/pngs/grid-png-transparent/grid_png_transparent_613046.png')",
+      // backgroundSize: "cover",
+      minHeight: 200
+    }}>
       {children}
     </div>
   );

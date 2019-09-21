@@ -8,7 +8,7 @@ export let defaultProps = {
   disabled: false
 };
 
-export let propTypes = {
+export let propTypes:any = {
   submit: PropTypes.bool,
   style: PropTypes.object,
   disabled: PropTypes.bool,

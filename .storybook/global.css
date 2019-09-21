@@ -3,3 +3,25 @@
 /*    border-width: 0.03px;*/
 /*    border-color: lightgray;*/
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead{
+    background: black;
+    color: white;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#table-container{
+    margin-top: 16px;
+}
