@@ -11,29 +11,6 @@ import {flexer} from "../flexer";
 import {sharedStyles} from "./styles";
 import PropTypes, {InferProps} from "prop-types";
 
-let top = {
-  mode: PropTypes.object.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
-
-let dataType = {
-  name: PropTypes.string.isRequired,
-  creationdate: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  units: PropTypes.number.isRequired,
-  phone: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
-};
-
-const propTypes = {
-  actions: PropTypes.shape({top: top, bottom: top}).isRequired,
-  data: PropTypes.shape(dataType).isRequired,
-  breakpoint: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"] as any).isRequired
-};
-
 export const UserCardListItem = (
   {breakpoint, actions, data}:
     InferProps<typeof propTypes>
@@ -89,6 +66,29 @@ export const UserCardListItem = (
       </Card>
     </ListItem>
   )
+};
+
+let top = {
+  mode: PropTypes.object.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+let dataType = {
+  name: PropTypes.string.isRequired,
+  creationdate: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  units: PropTypes.number.isRequired,
+  phone: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+};
+
+const propTypes = {
+  actions: PropTypes.shape({top: top, bottom: top}).isRequired,
+  data: PropTypes.shape(dataType).isRequired,
+  breakpoint: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"] as any).isRequired
 };
 
 UserCardListItem.propTypes = propTypes;
