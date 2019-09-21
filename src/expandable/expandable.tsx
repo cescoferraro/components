@@ -9,6 +9,7 @@ import Add from "@material-ui/icons/Add";
 import PropTypes from "prop-types";
 import {GroupAdd} from "@material-ui/icons";
 
+
 export const ExpendedB2BButton = (
   {label, color = "#989D9E", onClick, mode = "edit"}:
     { color?: string, label: string, mode?: ExpandedButtonTypes, onClick: () => void }) => {

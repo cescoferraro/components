@@ -4,7 +4,7 @@ import {UserCardListItem} from "../src/card/usercard";
 import {select} from "@storybook/addon-knobs";
 import {Breakpoint} from "@material-ui/core/styles/createBreakpoints";
 
-const breakpointGEN = (breakpoint: Breakpoint) =>
+const breakpointGEN = (breakpoint: Breakpoint):Breakpoint =>
   select("Breakpoint", {xs: "xs", sm: "sm", md: "md", lg: "lg"}, breakpoint);
 
 storiesOf('UserCardListItem', module)

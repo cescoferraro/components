@@ -10,10 +10,11 @@ import {UserActions} from "./actions";
 import {flexer} from "../flexer";
 import {sharedStyles} from "./styles";
 import PropTypes, {InferProps} from "prop-types";
+import {Breakpoint} from "@material-ui/core/styles/createBreakpoints";
 
 export const UserCardListItem = (
   {breakpoint, actions, data}:
-    InferProps<typeof propTypes>
+    {breakpoint:Breakpoint}&any
 ) => {
   const classes = sharedStyles();
   const isMobile = isWidthDown("xs", breakpoint);
@@ -86,10 +87,12 @@ let dataType = {
 };
 
 const propTypes = {
-  actions: PropTypes.shape({top: top, bottom: top}).isRequired,
+  actions: {top: top, bottom: top},
   data: PropTypes.shape(dataType).isRequired,
-  breakpoint: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"] as any).isRequired
+  breakpoint: PropTypes.oneOf(["xs", "sm", "md", "lg"] as any).isRequired
 };
 
 UserCardListItem.propTypes = propTypes;
-UserCardListItem.defaultProps = {};
+UserCardListItem.defaultProps = {
+  breakpoint:"lg"
+};
