@@ -54,3 +54,5 @@ ExpendedB2BButton.propTypes = {
   mode: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 };
+
+ExpendedB2BButton.defaultProps = {};

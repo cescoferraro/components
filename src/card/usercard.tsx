@@ -92,4 +92,4 @@ const propTypes = {
 };
 
 UserCardListItem.propTypes = propTypes;
-// UserCardListItem.defaultProps = defaultProps;
+UserCardListItem.defaultProps = {};
