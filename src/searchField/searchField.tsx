@@ -5,7 +5,7 @@ import Search from '@material-ui/icons/Search';
 
 import PropTypes from "prop-types";
 
-export const ExpendedB2BButton = (
+export const ExpendedB2BButton = ( 
     {label}:{label: string}) => {
 
   return (
