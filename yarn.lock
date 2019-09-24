@@ -8408,6 +8408,14 @@ storybook-addon-react-docgen@^1.2.18:
     react-addons-create-fragment "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+storybook-dark-mode@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/storybook-dark-mode/-/storybook-dark-mode-0.1.7.tgz#19e0ba033f93b137e1877ae363bacb8383edd42c"
+  integrity sha512-ELXq81RpFop79OA5xvOMLAEaWfEnPFfdi1Z+zqdK3uh4L9i3U8T2hOxGGFpp7ZG6pw4dGJtzn0KnwD25NwWITg==
+  dependencies:
+    fast-deep-equal "^2.0.1"
+    memoizerific "^1.11.3"
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"

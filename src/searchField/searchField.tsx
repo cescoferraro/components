@@ -8,7 +8,7 @@ interface ISearchFieldProps {
   label: string
 };
 
-/** A SearchField is a cool component. */
+/** Label is the input placeholder`s text. */
 export const SearchField = (
   {label = "Pesquisar"}: ISearchFieldProps) => {
   return (
