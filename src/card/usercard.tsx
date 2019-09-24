@@ -9,14 +9,43 @@ import {UserCardMainCage} from "./main_cage";
 import {UserActions} from "./actions";
 import {flexer} from "../flexer";
 import {sharedStyles} from "./styles";
-import PropTypes, {InferProps} from "prop-types";
 import {Breakpoint} from "@material-ui/core/styles/createBreakpoints";
 
+interface IButtonAction {
+  mode: string,
+  /** A button with a configurable background color. */
+  label: string,
+  onClick: () => void
+}
+
+interface IUserCardData {
+  /** A button with a configurable background color. */
+  name: string,
+  creationdate: string,
+  type: string,
+  email: string,
+  units: number,
+  phone: string,
+  role: string,
+  disabled: boolean
+}
+
+/** A UserCardListItem  is a cool component. */
 export const UserCardListItem = (
   {breakpoint, actions, data}:
-    {breakpoint:Breakpoint}&any
+    {
+      /** Material-UI Breakpoint ["xs","sm", "md", "lg"]. */
+      breakpoint: Breakpoint,
+      /** Actions Buttons configurations. */
+      actions: {
+        top: IButtonAction,
+        bottom: IButtonAction
+      },
+      /** The data to be displayed. */
+      data: IUserCardData
+    }
 ) => {
-  const classes = sharedStyles();
+  const classes: any = sharedStyles();
   const isMobile = isWidthDown("xs", breakpoint);
   const {name, units, creationdate, type, disabled, email, role, phone} = data;
   return (
@@ -69,30 +98,3 @@ export const UserCardListItem = (
   )
 };
 
-let top = {
-  mode: PropTypes.object.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
-
-let dataType = {
-  name: PropTypes.string.isRequired,
-  creationdate: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  units: PropTypes.number.isRequired,
-  phone: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
-};
-
-const propTypes = {
-  actions: {top: top, bottom: top},
-  data: PropTypes.shape(dataType).isRequired,
-  breakpoint: PropTypes.oneOf(["xs", "sm", "md", "lg"] as any).isRequired
-};
-
-UserCardListItem.propTypes = propTypes;
-UserCardListItem.defaultProps = {
-  breakpoint:"lg"
-};

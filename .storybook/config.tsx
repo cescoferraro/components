@@ -5,6 +5,7 @@ import {withA11y} from "@storybook/addon-a11y";
 import {withKnobs} from "@storybook/addon-knobs";
 import "./global.css"
 
+
 const req: any = require.context('../stories', true, /\.stories\.tsx$/);
 
 addDecorator(withA11y);
@@ -29,36 +30,6 @@ addDecorator(withInfo({
   header: false,
   inline: true,
   source: true,
-  TableComponent: (props: { propDefinitions: any[] }) => {
-    
-    let message = props.propDefinitions.length !== 0;
-    console.log(message)
-    console.log(props)
-    return (
-      <div id="table-container">
-        <table style={{width: "100%!important"}}>
-          <thead>
-              <tr>
-                <td style={{width: "33%"}}>{"Name"}</td>
-                <td style={{width: "33%"}}>{"Type"}</td>
-                <td style={{width: "33%"}}>{"Required"}</td>
-              </tr>
-          </thead>
-          <tbody>
-          {props.propDefinitions.map((def: any, index: number) => {
-            return (
-              <tr key={index}>
-                <td style={{width: "33%"}}>{def.property}</td>
-                <td style={{width: "33%"}}>{def.propType}</td>
-                <td style={{width: "33%"}}>{def.required ? "true" : null}</td>
-              </tr>
-            )
-          })}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
 }));
 
 configure(() => { req.keys().forEach(req) }, module);

@@ -1,13 +1,15 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {ExpendedB2BButton} from "../src/expandable/expandable";
-import {select, text} from "@storybook/addon-knobs";
+import {boolean, select, text} from "@storybook/addon-knobs";
 
+declare const module:any;
 
-storiesOf('ExpendedB2BButton', module)
+storiesOf('ExpendedButton', module)
   .add('primary', () =>
     <ExpendedB2BButton
       mode={select("Mode", ["add", "edit", "delete"], "add")}
+      disabled={boolean("Disabled", false)}
       label={text("Label", "Adicionar")}
       onClick={() => {}}
     />

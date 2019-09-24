@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import {B2BMainText} from '../src';
-import {StoryPresenter} from "./index.stories";
+import {StoryPresenter} from "./Button/index.stories";
 
 storiesOf('MainHeader', module)
   .add('default', () =>

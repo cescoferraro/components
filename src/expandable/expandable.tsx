@@ -5,14 +5,17 @@ import Fab from "@material-ui/core/Fab";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import Add from "@material-ui/icons/Add";
-// import GroupAdd from "@material-ui/icons/GroupAdd ";
-import PropTypes from "prop-types";
 import {GroupAdd} from "@material-ui/icons";
 
 
 export const ExpendedB2BButton = (
   {label, color = "#989D9E", onClick, mode = "edit"}:
-    { color?: string, label: string, mode?: ExpandedButtonTypes, onClick: () => void }) => {
+    {
+      color?: string,
+      label: string,
+      mode?: ExpandedButtonTypes,
+      onClick: () => void
+    }) => {
   const [hover, setHover] = React.useState(false);
   return (
     <div
@@ -49,11 +52,3 @@ export const ExpendedB2BButton = (
   );
 };
 
-ExpendedB2BButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  mode: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
-};
-
-ExpendedB2BButton.defaultProps = {};

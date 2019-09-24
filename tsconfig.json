@@ -3,6 +3,7 @@
     "outDir": "build/lib",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "baseUrl": "./src",
     "declarationMap": true,
     "sourceMap": true,
     "strictNullChecks": true,

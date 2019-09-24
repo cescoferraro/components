@@ -3,27 +3,24 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Search from '@material-ui/icons/Search';
 
-import PropTypes from "prop-types";
+interface ISearchFieldProps {
+  /** Label is the input placeholder`s text. */
+  label: string
+};
 
-export const ExpendedB2BButton = ( 
-    {label}:{label: string}) => {
-
+/** A SearchField is a cool component. */
+export const SearchField = (
+  {label = "Pesquisar"}: ISearchFieldProps) => {
   return (
-      <div>
-        <Grid container spacing={1} alignItems="flex-end">
-            <Grid item>
-                <Search/>
-            </Grid>
-            <Grid item>
-                <TextField id="input-with-icon-grid" label={label} />
-            </Grid>
+    <div>
+      <Grid container spacing={1} alignItems="flex-end">
+        <Grid item>
+          <Search/>
         </Grid>
+        <Grid item>
+          <TextField id="input-with-icon-grid" label={label}/>
+        </Grid>
+      </Grid>
     </div>
   );
 };
-
-ExpendedB2BButton.propTypes = {
-  label: PropTypes.string.isRequired
-};
-
-ExpendedB2BButton.defaultProps = {};

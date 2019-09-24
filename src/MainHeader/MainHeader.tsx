@@ -1,22 +1,19 @@
 import * as React from 'react';
 import {Typography} from "@material-ui/core";
-import PropTypes from "prop-types";
-
-const buttonPropTypes = {
-  /** textColor label */
-  textColor: PropTypes.string,
-  /** title label */
-  title: PropTypes.string.isRequired,
-  /** subtitle label */
-  subtitle: PropTypes.string.isRequired,
-  /** mobile label */
-  mobile: PropTypes.bool
-};
 
 /** Another label */
 export const B2BMainText = (
   {mobile = false, textColor, title, subtitle}:
-    any
+    {
+      /** textColor label */
+      textColor: string
+      /** title label */
+      title: string
+      /** subtitle label */
+      subtitle: string
+      /** mobile label */
+      mobile: boolean
+    }
 ) => {
   const isMobile = mobile;
   let innerColor = textColor;
@@ -43,9 +40,3 @@ export const B2BMainText = (
   );
 };
 
-B2BMainText.defaultProps = {
-  textColor: "#1B3C4D",
-  mobile: false
-};
-
-B2BMainText.propTypes = buttonPropTypes;

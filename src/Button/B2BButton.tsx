@@ -1,11 +1,26 @@
 import * as React from 'react';
 import {Button} from "@material-ui/core";
-import {InferProps} from "prop-types";
 import {makeStylesGen} from "./styles";
-import {defaultProps, propTypes} from "./props";
 
-export const B2BButton = (props: InferProps<typeof B2BButton.propTypes>) => {
-  const classes: any = makeStylesGen(props.type)();
+interface IB2BButtonProps {
+  type: "primary" | "secondary"
+  submit: boolean
+  label: string
+  style: string
+  onClick: () => void
+}
+
+/** A UserCardListItem  is a cool component. */
+export const B2BButton = (
+  {
+    disabled = false,
+    submit = false,
+    type = "primary",
+    label,
+    onClick = () => {},
+    style = {}
+  }: IB2BButtonProps) => {
+  const classes: any = makeStylesGen(type)();
   return (
     <Button
       classes={{
@@ -13,17 +28,14 @@ export const B2BButton = (props: InferProps<typeof B2BButton.propTypes>) => {
         containedSecondary: classes.containedSecondary,
       }}
       href={""}
-      disabled={props.disabled}
-      type={props.submit ? "submit" : "button"}
-      style={{minWidth: 300, margin: 0, ...props.style}}
-      color={props.type}
+      disabled={disabled}
+      type={submit ? "submit" : "button"}
+      style={{minWidth: 300, margin: 0, ...style}}
+      color={type}
       variant={"contained"}
-      onClick={props.onClick}
+      onClick={onClick}
     >
-      {props.label}
+      {label}
     </Button>
   );
 };
-
-B2BButton.propTypes = propTypes;
-B2BButton.defaultProps = defaultProps;
