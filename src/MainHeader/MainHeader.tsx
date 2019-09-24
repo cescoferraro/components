@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Typography} from "@material-ui/core";
 
 /** Another label */
-export const B2BMainText = (
+export const MainHeader = (
   {mobile = false, textColor, title, subtitle}:
     {
       /** textColor label */

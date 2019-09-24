@@ -1,4 +1,4 @@
-import {ExpendedB2BButton} from "../expandable/expandable";
+import {ExpendedButton} from "../expandable/expandable";
 import * as React from "react";
 import {flexer} from "../flexer";
 
@@ -28,14 +28,14 @@ export const UserActions = ({actions, isMobile}: {
       width: isMobile ? "auto" : "auto"
     }}>
       <div style={{marginLeft: "auto"}}>
-        <ExpendedB2BButton
+        <ExpendedButton
           mode={actions.top.mode}
           label={actions.top.label}
           onClick={actions.top.onClick}
         />
       </div>
       <div style={{marginLeft: "auto"}}>
-        <ExpendedB2BButton
+        <ExpendedButton
           mode={actions.bottom.mode}
           label={actions.bottom.label}
           onClick={actions.bottom.onClick}

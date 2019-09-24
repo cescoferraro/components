@@ -1,12 +1,14 @@
 import * as React from 'react';
+import {CSSProperties} from 'react';
 import {Button} from "@material-ui/core";
 import {makeStylesGen} from "./styles";
 
 interface IB2BButtonProps {
   type: "primary" | "secondary"
   submit: boolean
+  disabled: boolean
   label: string
-  style: string
+  style: CSSProperties
   onClick: () => void
 }
 

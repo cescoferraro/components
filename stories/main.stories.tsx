@@ -1,21 +1,14 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import {B2BMainText} from '../src';
-import {StoryPresenter} from "./Button/index.stories";
+import {MainHeader} from '../src';
 
 storiesOf('MainHeader', module)
   .add('default', () =>
-    <StoryPresenter>
-      <B2BMainText title={"Title"} subtitle={"Subtitle"}/>
-    </StoryPresenter>
+    <MainHeader title={"Title"} subtitle={"Subtitle"}/>
   )
   .add('mobile', () =>
-    <StoryPresenter>
-      <B2BMainText mobile={true} title={"Title"} subtitle={"Subtitle"}/>
-    </StoryPresenter>
+    <MainHeader mobile={true} title={"Title"} subtitle={"Subtitle"}/>
   )
   .add('different color', () =>
-    <StoryPresenter>
-      <B2BMainText title={"Title"} textColor={"red"} subtitle={"Subtitle"}/>
-    </StoryPresenter>
+    <MainHeader title={"Title"} textColor={"red"} subtitle={"Subtitle"}/>
   );

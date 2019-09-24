@@ -7,8 +7,8 @@ import EditIcon from '@material-ui/icons/Edit';
 import Add from "@material-ui/icons/Add";
 import {GroupAdd} from "@material-ui/icons";
 
-
-export const ExpendedB2BButton = (
+/** A ExpendedButton   is a cool component. */
+export const ExpendedButton = (
   {label, color = "#989D9E", onClick, mode = "edit"}:
     {
       color?: string,
