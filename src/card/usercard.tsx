@@ -12,7 +12,7 @@ import {sharedStyles} from "./styles";
 import {Breakpoint} from "@material-ui/core/styles/createBreakpoints";
 
 interface IButtonAction {
-  mode: string,
+  mode: ExpandedButtonTypes,
   /** A button with a configurable background color. */
   label: string,
   onClick: () => void
