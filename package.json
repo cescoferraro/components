@@ -48,9 +48,9 @@
   },
   "dependencies": {
     "@material-ui/icons": "^4.4.1",
-    "react": "16.9.0",
+    "react": "16.13.0",
     "react-docgen-typescript-loader": "^3.2.1",
-    "react-dom": "16.9.0",
+    "react-dom": "16.13.0",
     "storybook-addon-react-docgen": "^1.2.18"
   }
 }
