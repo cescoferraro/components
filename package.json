@@ -40,14 +40,15 @@
     "@types/storybook__react": "4.0.2",
     "babel-loader": "8.1.0",
     "react-docgen-typescript-webpack-plugin": "1.1.0",
-    "rollup-plugin-typescript2": "0.27.0",
     "rollup": "1.32.1",
+    "rollup-plugin-typescript2": "0.27.0",
     "storybook-dark-mode": "0.4.1",
-    "ts-loader": "6.2.2",
+    "ts-loader": "7.0.0",
     "typescript": "3.8.3"
   },
   "dependencies": {
     "@material-ui/icons": "^4.4.1",
+    "babel-preset-react-app": "9.1.2",
     "react": "16.13.0",
     "react-docgen-typescript-loader": "^3.2.1",
     "react-dom": "16.13.0",
