@@ -42,7 +42,7 @@
     "react-docgen-typescript-webpack-plugin": "1.1.0",
     "rollup": "1.32.1",
     "rollup-plugin-typescript2": "0.26.0",
-    "storybook-dark-mode": "0.1.7",
+    "storybook-dark-mode": "0.4.1",
     "ts-loader": "6.1.2",
     "typescript": "3.8.3"
   },
