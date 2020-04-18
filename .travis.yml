@@ -1,0 +1,14 @@
+language: node
+dist: bionic
+services: docker
+node_js: '13'
+before_script:
+  - sudo apt-get -qq update
+  - nvm install 13
+  - yarn
+script:
+  - yarn build
+
+
+
+
