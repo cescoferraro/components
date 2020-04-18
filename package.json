@@ -40,7 +40,7 @@
     "@types/storybook__react": "4.0.2",
     "babel-loader": "8.1.0",
     "react-docgen-typescript-webpack-plugin": "1.1.0",
-    "rollup": "1.32.1",
+    "rollup": "2.6.1",
     "rollup-plugin-typescript2": "0.27.0",
     "storybook-dark-mode": "0.4.1",
     "ts-loader": "7.0.0",
