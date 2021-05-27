@@ -41,7 +41,7 @@
     "rollup": "2.6.1",
     "rollup-plugin-typescript2": "0.27.0",
     "storybook-dark-mode": "^1.0.8",
-    "ts-loader": "7.0.0",
+    "ts-loader": "7.0.5",
     "typescript": "3.8.3"
   },
   "dependencies": {
