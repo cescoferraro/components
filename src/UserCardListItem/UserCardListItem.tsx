@@ -30,21 +30,20 @@ interface IUserCardData {
   disabled: boolean
 }
 
+export interface Props {
+  /** Material-UI Breakpoint ["xs","sm", "md", "lg"]. */
+  breakpoint: Breakpoint,
+  /** Actions Buttons configurations. */
+  actions: {
+    top: IButtonAction,
+    bottom: IButtonAction
+  },
+  /** The data to be displayed. */
+  data: IUserCardData
+}
+
 /** A UserCardListItem  is a cool component. */
-export const UserCardListItem = (
-  {breakpoint, actions, data}:
-    {
-      /** Material-UI Breakpoint ["xs","sm", "md", "lg"]. */
-      breakpoint: Breakpoint,
-      /** Actions Buttons configurations. */
-      actions: {
-        top: IButtonAction,
-        bottom: IButtonAction
-      },
-      /** The data to be displayed. */
-      data: IUserCardData
-    }
-) => {
+export const UserCardListItem = ({breakpoint, actions, data}: Props ) => {
   const classes: any = sharedStyles();
   const isMobile = isWidthDown("xs", breakpoint);
   const {name, units, creationdate, type, disabled, email, role, phone} = data;

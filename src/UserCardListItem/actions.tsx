@@ -1,4 +1,4 @@
-import {ExpendedButton} from "../expandable/expandable";
+import {ExpendedButton} from "../ExpendedButton";
 import * as React from "react";
 import {flexer} from "../flexer";
 

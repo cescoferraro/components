@@ -5,6 +5,7 @@
     "declaration": true,
     "baseUrl": "./src",
     "declarationMap": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "strictNullChecks": true,
     "jsx": "react"

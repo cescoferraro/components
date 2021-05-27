@@ -7,15 +7,18 @@ import EditIcon from '@material-ui/icons/Edit';
 import Add from "@material-ui/icons/Add";
 import {GroupAdd} from "@material-ui/icons";
 
+export interface Props {
+    disabled?: boolean,
+    color?: string,
+    label: string,
+    mode?: ExpandedButtonTypes,
+    onClick: () => void
+}
+
 /** A ExpendedButton   is a cool component. */
 export const ExpendedButton = (
-  {label, color = "#989D9E", onClick, mode = "edit"}:
-    {
-      color?: string,
-      label: string,
-      mode?: ExpandedButtonTypes,
-      onClick: () => void
-    }) => {
+  {disabled= false,label, color = "#989D9E", onClick, mode = "edit"}:
+    Props) => {
   const [hover, setHover] = React.useState(false);
   return (
     <div
@@ -24,6 +27,7 @@ export const ExpendedButton = (
     >
       {
         <Fab
+          disabled={disabled}
           variant={!hover ? "round" : "extended"}
           size={!hover ? "medium" : "large"}
           onClick={onClick}

@@ -3,7 +3,7 @@ import {CSSProperties} from 'react';
 import {Button} from "@material-ui/core";
 import {makeStylesGen} from "./styles";
 
-interface IB2BButtonProps {
+export interface B2BButtonProps {
   type: "primary" | "secondary"
   submit: boolean
   disabled: boolean
@@ -21,7 +21,7 @@ export const B2BButton = (
     label,
     onClick = () => {},
     style = {}
-  }: IB2BButtonProps) => {
+  }: B2BButtonProps) => {
   const classes: any = makeStylesGen(type)();
   return (
     <Button

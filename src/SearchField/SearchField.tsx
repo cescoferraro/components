@@ -3,14 +3,14 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Search from '@material-ui/icons/Search';
 
-interface ISearchFieldProps {
+export interface SearchFieldProps {
   /** Label is the input placeholder`s text. */
   label: string
-};
+}
 
 /** SearchField  is the input placeholder`s text. */
 export const SearchField = (
-  {label = "Pesquisar"}: ISearchFieldProps) => {
+  {label = "Pesquisar"}: SearchFieldProps) => {
   return (
     <div>
       <Grid container spacing={1} alignItems="flex-end">

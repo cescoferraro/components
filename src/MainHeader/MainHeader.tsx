@@ -1,19 +1,21 @@
 import * as React from 'react';
 import {Typography} from "@material-ui/core";
 
+export interface Props {
+    /** textColor label */
+    textColor: string
+    /** title label */
+    title: string
+    /** subtitle label */
+    subtitle: string
+    /** mobile label */
+    mobile: boolean
+}
+
 /** Another label */
 export const MainHeader = (
   {mobile = false, textColor, title, subtitle}:
-    {
-      /** textColor label */
-      textColor: string
-      /** title label */
-      title: string
-      /** subtitle label */
-      subtitle: string
-      /** mobile label */
-      mobile: boolean
-    }
+    Props
 ) => {
   const isMobile = mobile;
   let innerColor = textColor;
