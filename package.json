@@ -42,7 +42,7 @@
     "rollup-plugin-typescript2": "0.27.0",
     "storybook-dark-mode": "^1.0.8",
     "ts-loader": "7.0.0",
-    "typescript": "3.8.3"
+    "typescript": "3.9.10"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
