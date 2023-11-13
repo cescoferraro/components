@@ -39,7 +39,7 @@
     "babel-loader": "8.1.0",
     "react-docgen-typescript-webpack-plugin": "1.1.0",
     "rollup": "2.6.1",
-    "rollup-plugin-typescript2": "0.27.0",
+    "rollup-plugin-typescript2": "0.36.0",
     "storybook-dark-mode": "^1.0.8",
     "ts-loader": "7.0.0",
     "typescript": "3.8.3"
